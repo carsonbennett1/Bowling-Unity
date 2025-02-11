@@ -5,10 +5,10 @@ public class BallController : MonoBehaviour
 {
 
     [SerializeField] private float force = 1f;
+    [SerializeField] private InputManager inputManager;
 
     // name booleans like a question for clarity
     private bool isBallLaunched;
-    private InputManager inputManager;
     private Rigidbody ballRB;
     void Start()
     {
@@ -27,7 +27,6 @@ public class BallController : MonoBehaviour
 
         // now that the ball is not lauched, set it to true and launch the ball
         isBallLaunched = true;
-
         ballRB.AddForce(transform.forward * force, ForceMode.Impulse);
     }
 
