@@ -30,8 +30,4 @@ public class BallController : MonoBehaviour
         ballRB.AddForce(transform.forward * force, ForceMode.Impulse);
     }
 
-    void Update()
-    {
-        
-    }
 }
