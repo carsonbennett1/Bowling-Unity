@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
     [SerializeField] private InputManager inputManager;
     [SerializeField] private float speed;
 
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     void Start()
     {

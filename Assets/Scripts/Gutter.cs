@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Gutter : MonoBehaviour
 {
-    private Rigidbody ballRB;
     private void OnTriggerEnter(Collider triggeredBody)
     {
 
@@ -19,12 +18,8 @@ public class Gutter : MonoBehaviour
 
         // Add force in the forward direction of the gutter
         // Use cached velocity magnitude to keep it a little realistic
-        ballRB.AddForce(transform.forward * velocityMagnitude, ForceMode.VelocityChange);
+        ballRigidBody.AddForce(transform.up * velocityMagnitude, ForceMode.VelocityChange);
     }
 
-    private void Start()
-    {
-        ballRB = GetComponent<Rigidbody>();
-    }
 
 }
